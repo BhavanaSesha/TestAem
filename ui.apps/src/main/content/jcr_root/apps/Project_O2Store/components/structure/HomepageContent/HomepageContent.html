@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+color:white;
+font-size: 250%;
+font-family: "Avant Garde";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-shadow: 2px 2px black;
+}
+.banner-two{
+font-weight: bold;
+color:black;
+font-size: 50px;
+font-family: "Avant Garde";
+animation: glow 1s ease-in-out infinite alternate;
+}
+.banner-three{
+color:black;
+font-size: 50px;
+font-family: "Avant Garde";
+
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#text-img{
+ float: right;
+}
+#text-text{
+ padding: 0px 30px 0px 30px;
+ font-size: 20px;
+}
+div.homepage-gallery {
+margin-left: 100px;
+margin-bottom: 15px;
+margin-top: 15px;
+border: 1px solid #ccc;
+float: left;
+width: 200px;
+background-color: #D3D3D3;
+
+}
+
+div.homepage-gallery:hover {
+  border: 2px solid #777;
+}
+
+div.homepage-gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+#homepage-textandimage{
+background-color: #D3D3D3;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <img src="/content/dam/orchardTwo/hpimages/plants2.jpg" alt="plant" width="100%" height="500">
+  <div class="bottom-left"></div>
+  <div class="top-left"></div>
+  <div class="top-right"></div>
+  <div class="bottom-right"></div>
+   <div class="centered"><h1>Welcome to <div style="margin-bottom:20px;"></div> O2 Store</h1></div>
+</div>
+<div style="margin-bottom:20px;"></div>
+<div class="container">
+  <img src="/content/dam/orchardTwo/hpimages/planters.jpg" alt="Snow" width="100%" height="500">
+
+   <div class="centered"><p class="banner-two">Happiness</p>
+   <p class="banner-two">is buying more and more</p>
+   <p class="banner-two">Plants</p>
+   <button class="button" onclick="location.href = 'https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI';">Shop Now</button>
+   </div>
+</div>
+
+<div style="margin-bottom:20px;"></div>
+<div style=style="text-align: center;">
+<h4 style=" font-size: 30px;">What's new?</h4>
+</div>
+<div style="margin-bottom:20px;"></div>
+
+<div class="container">
+  <img src="/content/dam/orchardTwo/hpimages/planters2.jpg" alt="Snow" width="100%" height="500">
+
+   <div class="top-left" >
+   <p class="banner-three">Planters</p>
+   <p class="banner-three">add color to your garden.</p>
+   <button class="button" onclick="location.href = 'https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI';">Shop Now</button>
+   </div>
+</div >
+<div style="margin-bottom:20px;"></div>
+
+<div id="homepage-textandimage">
+<br>
+<h4 style=" font-size: 30px; padding: 0px 30px 0px 30px; ">Aloe Vera - The Plant of Immortality</h4>
+<p><img id="text-img" src="/content/dam/orchardTwo/hpimages/aleo-vera.jpg" alt="Pineapple" style="width:170px;height:170px;margin-left:15px;margin-right:15px;">
+<p id="text-text">
+The plant which was used by sailors in early 1400s to soothe their burnt skin and ward off bacteria, stands tall in the
+natural medicine lineage. Aloe vera , one of the most popular plant that has been part of ayurverda and several other cultures 
+remedy practices for thousands of years is still the most sought after plant for natural remedies, hence called Aloe Vera - The Plant of Immortality.
+</p>
+</p>
+<center> <button class="button" onclick="location.href = 'https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI';">Buy Aleo Vera</button>
+</center>
+<br><br><br>
+</div>
+<div style="margin-bottom:60px;"></div>
+
+<div style=style="text-align: center;">
+<h4 style=" font-size: 30px;">Must have plants in your garden!</h4>
+</div>
+
+
+<div class="homepage-gallery">
+  <a target="_blank" href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI">
+    <img src="/content/dam/orchardTwo/plants/medicinal-plants/neem-tree-plant.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">TULSI PLANT :Tulsi in the house destroys negative energy and increases positive energy.</div>
+</div>
+
+<div class="homepage-gallery">
+  <a target="_blank" href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI">
+    <img src="/content/dam/orchardTwo/plants/medicinal-plants/scented-rose-plant.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">ROSE PLANT: The plant is considered auspicious as it can absorb negative energies.</div>
+</div>
+
+<div class="homepage-gallery">
+  <a target="_blank" href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI">
+    <img src="/content/dam/orchardTwo/plants/medicinal-plants/tulsi-plant-holy-basil-plant.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">NEEM PLANT: The presence of a neem tree at home generates positivity and happiness.</div>
+</div>
+
+<div class="homepage-gallery">
+  <a target="_blank" href="https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwj2ifXxoenvAhVCwzgGHVy-ChIQPQgI">
+    <img src="/content/dam/orchardTwo/plants/medicinal-plants/tulsi-plant-holy-basil-plant.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">HIBISCUS PLANT: One of the most beautiful flowering plant,adds beauty to your garden.</div>
+</div>
+
+</body>
+</html> 

@@ -1,0 +1,119 @@
+ <sly data-sly-use.topnav="com.mindtree.Project_O2Store.core.models.O2StoreHeaderModel"></sly>
+
+<sly
+        data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+        data-sly-call="${clientLib.all @ categories='O2store1.Header'}"/>
+
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+   (function($) {
+$.fn.menumaker = function(options) {  
+ var header_cssmenu = $(this), settings = $.extend({
+   format: "dropdown",
+   sticky: false
+ }, options);
+ return this.each(function() {
+   $(this).find(".header-button").on('click', function(){
+     $(this).toggleClass('header-menu-opened');
+     var mainmenu = $(this).next('ul');
+     if (mainmenu.hasClass('header-open')) { 
+       mainmenu.slideToggle().removeClass('header-open');
+     }
+     else {
+       mainmenu.slideToggle().addClass('header-open');
+       if (settings.format === "dropdown") {
+         mainmenu.find('ul').show();
+       }
+     }
+   });
+   header_cssmenu.find('li ul').parent().addClass('header-has-sub');
+multiTg = function() {
+  header_cssmenu.find(".header-has-sub").prepend('<span class="header-submenu-button"></span>');
+     header_cssmenu.find('.header-submenu-button').on('click', function() {
+       $(this).toggleClass('header-submenu-opened');
+       if ($(this).siblings('ul').hasClass('header-open')) {
+         $(this).siblings('ul').removeClass('header-open').slideToggle();
+       }
+       else {
+         $(this).siblings('ul').addClass('header-open').slideToggle();
+       }
+     });
+   };
+   if (settings.format === 'multitoggle') multiTg();
+   else header_cssmenu.addClass('dropdown');
+   if (settings.sticky === true) header_cssmenu.css('position', 'fixed');
+resizeFix = function() {
+  var mediasize = 1000;
+     if ($( window ).width() > mediasize) {
+      header_cssmenu.find('ul').show();
+     }
+     if ($(window).width() <= mediasize) {
+      header_cssmenu.find('ul').hide().removeClass('header-open');
+     }
+   };
+   resizeFix();
+   return $(window).on('resize', resizeFix);
+ });
+  };
+})(jQuery);
+
+(function($){
+$(document).ready(function(){
+$("#header-cssmenu").menumaker({
+   format: "multitoggle"
+});
+});
+})(jQuery);
+</script>
+
+
+
+</head>
+<body>
+<header class="header-navigation" id="header-sticky-nav">
+        <div class="container">
+
+
+            <nav id='header-cssmenu' class="header-navigation" >
+				 <a href="/content/Project_O2Store/en/homepage.html"  >
+					<div class="cmp_header_title">
+
+           				<img src="/content/dam/Project_O2Store/en/images/logo8.jpg" class="cmp_header_logo" alt="logo"/>
+                     		<h2 class="cmp_header_head" >&nbsp;&nbsp;O<sub>2</sub>Store</h2>
+				</div>
+          		</a>
+                <div id="header-head-mobile"></div>
+                <div class="header-button"></div>
+
+
+			<ul>
+                   <li  data-sly-repeat="${topnav.getRootChildPages}">
+                   		<span class="header-submenu-button"></span>
+                        	<sly data-sly-test="${item.title!='HomePage' && item.title!='Login'}">
+                        	<a href="${item.path}.html">${item.title}</a>
+                            </sly>
+
+                    </li>
+
+                    <!--<li><a href="/content/O2Store_Project/en/seeds.html">Login</a></li>-->
+                    <li><i class="fa fa-shopping-cart" style="font-size:20px;color:green" data-toggle="modal" data-target="#cart"> (<span
+										class="total-count" style="color:green";></span>)</i></li>
+                  </ul>
+
+
+
+
+            </nav>
+        </div>
+    </header>
+    
+
+</body>
+</html>

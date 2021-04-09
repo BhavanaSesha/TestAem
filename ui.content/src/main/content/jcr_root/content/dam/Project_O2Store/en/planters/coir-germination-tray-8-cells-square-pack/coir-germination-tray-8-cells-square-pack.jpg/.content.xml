@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:photoshop="http://ns.adobe.com/photoshop/1.0/" xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="0abf0f81-43b3-4d04-8d8a-c5eae8b3f2d2">
+    <jcr:content
+        cq:name="coir-germination-tray-8-cells-square-pack.jpg"
+        cq:parentPath="/content/dam/Project_O2Store/en/planters/coir-germination-tray-8-cells-square-pack"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2021-04-05T17:41:04.997+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2021-04-05T17:41:03.976+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}72"
+            dam:Physicalheightininches="{Decimal}8.333333015441895"
+            dam:Physicalwidthindpi="{Long}72"
+            dam:Physicalwidthininches="{Decimal}8.333333015441895"
+            dam:Progressive="no"
+            dam:sha1="71e56162c5c19865e3648dc5f0aefd7bc3f3b6b4"
+            dam:size="{Long}75383"
+            dam:TimeCreated="162155+0530"
+            dc:date="{Long}[20210209,20210209,20210209]"
+            dc:date_xmpArrayType="rdf:Seq"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2021-04-02T23:36:00.458+05:30"
+            jcr:lastModified="{Date}2021-04-05T17:41:03.542+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            photoshop:DateCreated="{Date}2021-02-09T16:21:55.000+05:30"
+            tiff:ImageLength="{Long}600"
+            tiff:ImageWidth="{Long}600"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="6ea70e62-985c-4a86-83ac-a4dd1d67b420">
+    <jcr:content
+        cq:name="coleus-green-maroon-plant.jpg"
+        cq:parentPath="/content/dam/Project_O2Store/en/plants/coleus-green-maroon-plant"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2021-04-05T17:40:53.982+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2021-04-05T17:40:53.632+05:30"
+            dam:sha1="e3a4e67c9df0369bc84619e02ab0e79951aafcd2"
+            dam:size="{Long}79408"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2021-04-02T23:37:27.663+05:30"
+            jcr:lastModified="{Date}2021-04-05T17:40:47.007+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

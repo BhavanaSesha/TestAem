@@ -1,0 +1,113 @@
+<sly data-sly-use.obj1="com.mindtree.Project_O2Store.core.models.AllCategoriesModel"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call = "${clientlib.all @ categories='Plantersplp'}"/>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call="${clientlib.js @ categories='Project_O2Store.site'}"/>
+
+<sly data-sly-include="/apps/Project_O2Store/components/structure/CartComponent/CartComponent.html"/>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+<body>
+<div id="plantersdropdown">
+<p id="sidenav-textstyle-catgories1">Types of Planters</p>
+<p id="all-unchecked">Go back to all planters</p>
+<form name="Categories">
+  <input type="checkbox" value="Accesories" name="Accesories"/><label> Accesories </label><br>
+  <input type="checkbox" value="Materials" name="Materials"/><label> Materials</label><br>
+
+</form>
+</div>
+
+
+	<div class="container">
+
+        <div id="allData">
+        <div class="row">
+		</div>
+		<div class="row">
+
+
+            <div class="col" style="padding:20px;" data-sly-repeat="${obj1.getPlanters}" >
+            <a href="${item.getPdpLink}" style="text-decoration:none;clor:black;">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" width="200" height="275" style="border-radius:30px;"
+                        src="/content/dam/Project_O2Store/en/planters/planter-images/${item.getProductName}.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">₹ ${item.getPrice}</h5>
+
+                        <p class="card-text" align="center">${item.getProductDisplayName}</p>
+                            <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="quickshop btn btn-primary">QuickShop</button>
+                            <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="add-to-cart btn btn-primary">Add to cart</button>
+
+
+                    </div>
+                </div>
+                </a>
+            </div>
+
+		</div>
+        </div>
+
+<div id="Accesories">
+    <h1>Accesories</h1>
+     <div class="row">
+		</div>
+		<div class="row">
+
+
+            <div class="col" style="padding:20px;" data-sly-repeat="${obj1.getAccesories}" >
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" width="200" height="275" style="border-radius:30px;"
+                        src="/content/dam/Project_O2Store/en/planters/planter-images/${item.getProductName}.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">₹ ${item.getPrice}</h5>
+                    <a href="${item.getPdpLink}" style="text-decoration:none;">
+                        <p class="card-text" align="center">${item.getProductDisplayName}</p></a>
+                           <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="quickshop btn btn-primary">QuickShop</button>
+
+                            <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="add-to-cart btn btn-primary">Add to cart</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+<div id="Materials">
+  <h1>Materials</h1>
+     <div class="row">
+		</div>
+		<div class="row">
+
+
+            <div class="col" style="padding:20px;" data-sly-repeat="${obj1.getMaterials}" >
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" width="200" height="275" style="border-radius:30px;"
+                      src="/content/dam/Project_O2Store/en/planters/planter-images/${item.getProductName}.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">₹ ${item.getPrice}</h5>
+                    <a href="${item.getPdpLink}" style="text-decoration:none;">
+                        <p class="card-text" align="center">${item.getProductDisplayName}</p></a>
+                            <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="quickshop btn btn-primary">QuickShop</button>
+                            <button type="button" style="margin-left:15px;" data-name="${item.getProductDisplayName}" data-price="${item.getPrice}" data-id="${item.getProductId}" class="add-to-cart btn btn-primary">Add to cart</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>

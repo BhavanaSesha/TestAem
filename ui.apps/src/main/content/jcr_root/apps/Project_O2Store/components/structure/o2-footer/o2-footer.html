@@ -1,0 +1,45 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"> 
+<sly data-sly-call="${clientlib.css @categories='o2-footer'}"/>
+
+<sly data-sly-use.obj="com.mindtree.Project_O2Store.core.models.O2StoreHeaderModel"/> 
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+</head>
+
+<footer class="footer">
+	<div class="container">
+		<div class="row">
+			<div class=" col-sm-4 col-md col-sm-4  col-12 col">
+               <a href="/content/Project_O2Store/en/homepage.html" style="text-decoration:none;"> <h2 class="headin5_amrc title pt2" style="color:#5B9C64">O<sub>2</sub>Store</h2></a>
+
+			</div>
+
+			<div class=" col-sm-4 col-md  col-6 col">
+				<h5 class="headin5_amrc title pt2" style="color:#5B9C64">Info</h5>
+				<ul class="footer_ul">
+					<sly data-sly-list="${obj.getRootChildPages}">
+						<li><a href="${item.path}.html">${item.title}</a></li>
+					</sly>
+				</ul>
+			</div>
+
+			<div class=" col-sm-4 col-md  col-6 col">
+				<h5 class="headin5_amrc title pt2" style="color:#5B9C64">Quick links</h5>
+				<ul class="footer_ul">
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Refund Policy</a></li>
+					<li><a href="#">Shipping Policy</a></li>
+					<li><a href="#">Terms and Service</a></li>
+				</ul>
+			</div>
+
+			<div class=" col-sm-4 col-md  col-12 col">
+				<h5 class="headin5_amrc title pt2" style="color:#5B9C64">Contact us</h5>
+				<p><i class="fa fa-phone"></i> +91-9999999999 </p>
+				<p><i class="fa fa fa-envelope"></i> o2.store@gmail.com</p>
+			</div>
+		</div>
+	</div>
+</footer>

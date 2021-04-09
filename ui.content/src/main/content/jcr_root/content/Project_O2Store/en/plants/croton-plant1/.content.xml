@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-04-08T17:24:32.273+05:30"
+        cq:lastModifiedBy="projectotwouser"
+        cq:lastReplicated="{Date}2021-04-06T16:12:17.034+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/Project_O2Store/Project_O2StoreTemplates/settings/wcm/templates/o2projecttemplate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Croton Plant"
+        jcr:uuid="479b0d4c-a8bd-4067-b78b-4204aa04917d"
+        sling:resourceType="Project_O2Store/components/structure/page">
+        <root
+            jcr:lastModified="{Date}2021-04-06T15:45:02.604+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <o2_header
+                jcr:created="{Date}2021-04-05T18:10:38.446+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-05T18:10:38.446+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/O2-Header"/>
+            <o2pdpcomponent
+                cq:lastReplicated="{Date}2021-04-05T18:17:08.111+05:30"
+                cq:lastReplicatedBy="admin"
+                cq:lastReplicationAction="Activate"
+                jcr:created="{Date}2021-04-05T12:59:20.608+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-05T12:59:20.608+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/o2pdpComponent"
+                aboutPoint1="Croton likes bright sunlight but benefits from partial or filtered shade during hot summer afternoons. "
+                aboutPoint2="Water croton until water trickles through the drainage hole when the top of the soil feels dry, and then allow the pot to drain freely."
+                aboutPoint3="Re-pot indoor crotons every two years to encourage healthy growth."
+                category="foilage"
+                description="Crotons are one of the boldest houseplants you can't miss because of their colorful foliage. "
+                fileReference="/content/dam/Project_O2Store/en/plants/croton-plant1/croton-plant1.jpg"
+                offer1="1 Plant Food worth 15/- free"
+                offer2="20% Cashback"
+                originalPrice="{Long}849"
+                plantid="{Long}15"
+                price="{Long}800"
+                title="Croton Plant"/>
+            <o2_footer
+                jcr:created="{Date}2021-04-06T15:44:52.478+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-06T15:44:52.478+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/o2-footer"/>
+        </root>
+    </jcr:content>
+</jcr:root>

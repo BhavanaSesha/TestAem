@@ -1,0 +1,82 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call = "${clientlib.all @ categories='creditcardcomp'}"/>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>     
+<body>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="title">CREDIT CARD</div>
+    
+    <div class="input-form">
+      <div class="section-1">
+        <div class="items">
+          <label class="label">CARD NUMBER</label>
+          <input type="text" class="input" data-mask="0000 0000 0000 0000" placeholder="xxxx xxxx xxxx xxxx" id="cardnumber1" name="cardnumber1">
+        </div>
+      </div>
+      <div class="section-2">
+        <div class="items">
+          <label class="label">CARD HOLDER NAME</label>
+          <input type="text" class="input" placeholder="CARD HOLDER NAME" id="name1" name="name1">
+        </div>
+      </div>
+      <div class="section-3">
+        <div class="items">
+          <label class="label">Expire date</label>
+          <input type="text" class="input" data-mask="00 / 00" placeholder="MM / YY" id="expiry1" name="expiry1">
+        </div>
+        <div class="items">
+          <div class="cvc">
+            <label class="label" required>CVV</label>
+
+          </div>
+          <input type="password" class="input" data-mask="000" placeholder="000" id="cvv1" name="cvv1">
+        </div>
+      </div>
+    </div>
+    
+    <div class="btn">
+        <a href="/content/Project_O2Store/en/login/orderPlaced.html" style="text-decoration:none;" class="creditcardbutton" >proceed</a></div>
+
+    
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js"></script>
+    <script>
+
+$('.creditcardbutton').click(function(){ 
+var cardnumber = $('#cardnumber1').val(); 
+var name = $('#name1').val(); 
+var expiry = $('#expiry1').val(); 
+var cvv = $('#cvv1').val(); 
+if(!cardnumber || !name || !expiry || !cvv){
+return;
+}
+$.ajax({
+    type : "POST",    
+        url : '/bin/CreditCard/CreditCardServlet',    
+        data : {        
+           cardnumber:cardnumber,
+           name:name,
+           expiry:expiry,
+           cvv:cvv
+
+        },    
+        success : function(data, textStatus, jqXHR) {
+
+        },    
+        error : function(XMLHttpRequest, textStatus, errorThrown) {        
+           alert(data);
+        }
+        });
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call = "${clientlib.all @ categories='login-registerComp'}"/>
+
+<head>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+
+<body>
+
+<div class="loginRegister-hero">
+<div class="loginRegister-box">
+<div class="loginRegister-button_box">
+    <div id="btn"></div>
+    <button type="button" class="loginRegister-toggle_btn" onclick="login()">Log In</button>
+    <button type="button" class="loginRegister-toggle_btn" onclick="register()">Register</button>
+</div>
+<form name="myloginform" id="loginRegister-login" class="loginRegister-input_group" >
+    <input type="email" class="login-input_field" id="email1" placeholder="Email" name="email1" required>
+    <input type="password" class="login-input_field" id="password1" placeholder="Password" name="password1" required>
+    <br>
+    <br>
+    <br>
+    <button type="submit" class="login-submit_btn" onclick="clicked()">Log In</button>
+    <br>
+    <br>
+    <div class="forget">
+    <a href="/content/Project_O2Store/en/login/forgetPassword.html">Forgot Password?</a></div>
+    <br>  
+    <br>
+    <p id="loginDisplayMessage"></p>
+</form>
+<form  name="myform" id="loginRegister-register" class="loginRegister-input_group" >
+    <input type="text" class="register-input_field" id='firstname' placeholder="First Name" name="firstname" required >
+    <input type="text" class="register-input_field" id='lastname' placeholder="Last Name" name="lastname" required>
+    <input type="email" class="register-input_field" id='email' placeholder="Email" name="email" required>
+    <input type="password" class="register-input_field" id='password' placeholder="Password" name="password" required>
+     <br>
+     <br>
+     <label>Select Country</label>
+     <select id="country" value="Aland Islands" name="country" ></select>
+
+
+    <h1 id="output"></h1>
+    <br>
+    <br>
+    <button type="submit"  class="register-submit_btn" >Register</button>
+
+    <div id="error"></div>
+</form>
+</div>
+</div>
+<p id="alert"></p>
+    </body>
+
+    <script>
+var x = document.getElementById("loginRegister-login");
+    var y = document.getElementById("loginRegister-register");
+    var z = document.getElementById("btn");
+
+    function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }
+
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+    }
+
+
+ function clicked(){
+    console.log("Function Clicked");
+    var cookieValue = escape(document.myloginform.email1.value+";");
+    var now = new Date();
+    now.setMonth(now.getMonth()+1);
+    document.cookie = "email = " + cookieValue;
+    document.cookie = "expires = " + now.toUTCString()+";";
+}
+
+let ans=undefined;
+async function get(){
+        try{
+        const data=await fetch("https://restcountries.eu/rest/v2/all");
+      ans=await data.json();
+      exe();
+    }
+    catch(err){
+
+    }
+}
+get();
+
+function exe(){
+  let s=document.getElementById("country")
+  for(let i=0;i<ans?.length;i++){
+    let op=document.createElement("option");
+    op.setAttribute("value",ans[i].name);
+    let d=document.createTextNode(ans[i].name);
+    op.appendChild(d);
+    s.appendChild(op);
+  }
+}
+
+function handleChange(){
+  document.getElementById("changed").innerHTML=document.getElementById("country").value;
+}
+
+
+$('.register-submit_btn').click(function(){ 
+var firstname = $('#firstname').val(); 
+var lastname = $('#lastname').val(); 
+var email = $('#email').val(); 
+var password = $('#password').val(); 
+var country = $('#country').val();
+if(!firstname || !lastname || !email || !password || !country){
+return;
+}
+$.ajax({
+    type : "POST",    
+        url : '/bin/Registration/RegistrationServlet',    
+        data : {        
+           firstname:firstname,
+           lastname:lastname,
+           email:email,
+           password:password,
+           country:country
+
+        },    
+        success : function(data, textStatus, jqXHR) {
+alert(firstname);
+        },    
+        error : function(XMLHttpRequest, textStatus, errorThrown) {        
+
+}
+
+        });
+
+});
+
+
+
+$('.login-submit_btn').click(function(){  
+var email = $('#email1').val(); 
+var password = $('#password1').val(); 
+$.ajax({
+    type : "POST",    
+        url : '/bin/Login/LoginServlet',    
+        data : {        
+           email:email,
+           password:password
+
+        },    
+        success : function(data, textStatus, jqXHR) {
+
+        $('#loginDisplayMessage').text(data);
+
+
+        },    
+        error : function(XMLHttpRequest, textStatus, errorThrown) {        
+
+        }
+        });
+        });
+
+if(document.getElementById("alert").innerHTML){
+console.log("error "+document.getElementById("alert").innerHTML);
+setTimeout(function(){
+		document.getElementById("alert").innerHTML="";
+},5000)
+}
+    </script>
+
+
+
+

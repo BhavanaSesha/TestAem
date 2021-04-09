@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="2d2b40d2-48c2-45fc-b17a-7aa53e8d7fd7">
+    <jcr:content
+        cq:name="plant.jpg"
+        cq:parentPath="/content/dam/Project_O2Store/en/login"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2021-04-07T22:12:48.937+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:Bitsperpixel="{Long}24"
+            dam:extracted="{Date}2021-04-07T22:12:32.846+05:30"
+            dam:Fileformat="JPEG"
+            dam:MIMEtype="image/jpeg"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}100"
+            dam:Physicalheightininches="{Decimal}3.940000057220459"
+            dam:Physicalwidthindpi="{Long}100"
+            dam:Physicalwidthininches="{Decimal}7.0"
+            dam:Progressive="yes"
+            dam:sha1="05114fa4da76d59e20c7f509819c7ac9b1175c54"
+            dam:size="{Long}34514"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2021-04-06T12:38:32.348+05:30"
+            jcr:lastModified="{Date}2021-04-07T22:12:28.019+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}394"
+            tiff:ImageWidth="{Long}700"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,86 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call = "${clientlib.all @ categories='billingcomp'}"/>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>     
+<body>
+
+<div class="wrapper">
+<div class="container">
+    <div class="title">Shipping Address</div>
+
+    <div class="input-form">
+      <div class="section-1">
+        <div class="items">
+          <input type="text" class="input"  placeholder="enter your full name" id="fullname" name="fullname" >
+        </div>
+      </div>
+      <div class="section-2">
+        <div class="items" >
+          <input type="email" class="input" placeholder="enter the email" id="email" name="email" >
+        </div>
+      </div>
+      <div class="section-3">
+        <div class="items">
+          <input type="text" class="input" placeholder="enter the address" id="address" name="address" >
+        </div>
+      </div>
+     <div class="section-4">
+        <div class="items">
+          <input type="text" class="input" placeholder="enter the city" id="city" name="city" >
+        </div>
+      </div>
+      <div class="section-5">
+        <div class="items">
+          <input type="text" class="input" placeholder="enter the state" id="state" name="state" >
+        </div>
+      </div>
+     <div class="section-6">
+        <div class="items">
+          <input type="text" class="input" placeholder="enter the postal code" id="postalcode" name="postalcode" >
+        </div>
+      </div>
+    <div class="btn" required>
+        <a href="/content/Project_O2Store/en/login/paymentOption.html"  style="text-decoration:none;" class="shippingdetailsbtn"> proceed</a></div>
+</div>
+</div>
+</div>
+            <script>
+
+$('.shippingdetailsbtn').click(function(){ 
+var fullname = $('#fullname').val(); 
+var email = $('#email').val(); 
+var address = $('#address').val(); 
+var city = $('#city').val();
+var state = $('#state').val();
+var postalcode = $('#postalcode').val();
+if(!fullname || !email || !address || !city || !state || !postalcode){
+return;
+}
+$.ajax({
+    type : "POST",    
+        url : '/bin/ShippingDetails/ShippingDetailsServlet',    
+        data : {        
+          fullname:fullname,
+           email:email,
+           address:address,
+           city:city,
+           state:state,
+           postalcode:postalcode
+        },    
+        success : function(data, textStatus, jqXHR) {
+        alert(ata);
+        },    
+        error : function(XMLHttpRequest, textStatus, errorThrown) {        
+           alert(data);
+        }
+        });
+});
+
+    </script>
+</body>
+</html>

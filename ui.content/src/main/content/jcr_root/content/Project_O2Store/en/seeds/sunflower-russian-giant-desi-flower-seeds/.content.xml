@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2021-04-08T17:24:43.050+05:30"
+        cq:lastModifiedBy="projectotwouser"
+        cq:lastReplicated="{Date}2021-04-06T16:12:17.034+05:30"
+        cq:lastReplicatedBy="admin"
+        cq:lastReplicationAction="Activate"
+        cq:template="/conf/Project_O2Store/Project_O2StoreTemplates/settings/wcm/templates/o2projecttemplate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="SunFlower Flower Seeds"
+        jcr:uuid="3086ca12-d4f4-4d83-b048-bd5ed2d1edcd"
+        sling:resourceType="Project_O2Store/components/structure/page">
+        <root
+            jcr:lastModified="{Date}2021-04-06T15:45:02.604+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <o2_header
+                jcr:created="{Date}2021-04-05T18:10:38.446+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-05T18:10:38.446+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/O2-Header"/>
+            <o2pdpcomponent
+                cq:lastReplicated="{Date}2021-04-05T18:17:08.111+05:30"
+                cq:lastReplicatedBy="admin"
+                cq:lastReplicationAction="Activate"
+                jcr:created="{Date}2021-04-05T12:59:20.608+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-05T12:59:20.608+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:mixinTypes="[cq:ReplicationStatus]"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/o2pdpComponent"
+                aboutPoint1="Sunflowers grow best in locations with the direct sun (6 to 8 hours per day); they prefer long, hot summers to flower well"
+                aboutPoint2="Find a well-drained location, and prepare your soil by digging an area of about 2-3 feet in circumference to a depth of about 2 feet"
+                aboutPoint3="Sunflowers are heavy feeders so the soil needs to be nutrient-rich with organic matter or composted (aged) manure"
+                category="seeds"
+                description="Sunflowers are annuals with showy, daisylike flower-heads that are usually 2-4 inches across and bright yellow (though occasionally red). "
+                fileReference="/content/dam/Project_O2Store/en/seeds/sunflower-russian-giant-desi-flower-seeds/sunflower-russian-giant-desi-flower-seeds.jpg"
+                offer1="1 Plant Food worth Rs 15 FREE"
+                offer2="20% Cashback"
+                originalPrice="{Long}75"
+                plantid="{Long}49"
+                price="{Long}55"
+                title="SunFlower Flower Seeds"/>
+            <o2_footer
+                jcr:created="{Date}2021-04-06T15:44:52.478+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2021-04-06T15:44:52.478+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="Project_O2Store/components/structure/o2-footer"/>
+        </root>
+    </jcr:content>
+</jcr:root>

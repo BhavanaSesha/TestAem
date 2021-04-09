@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:referenceable,mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="2a746508-37bf-44b8-8e0e-4af1ea85e14c">
+    <jcr:content
+        cq:name="shevanti-red-plant.jpg"
+        cq:parentPath="/content/dam/Project_O2Store/en/images"
+        dam:assetState="processed"
+        jcr:lastModified="{Date}2021-04-05T17:40:13.223+05:30"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent">
+        <metadata
+            dam:extracted="{Date}2021-04-05T17:39:37.496+05:30"
+            dam:sha1="dda9915530b8e92eb342aa6c9b058f8cf44ca58b"
+            dam:size="{Long}89488"
+            dc:format="image/jpeg"
+            dc:modified="{Date}2021-04-05T12:24:28.519+05:30"
+            jcr:lastModified="{Date}2021-04-05T17:40:13.222+05:30"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"/>
+        <related jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

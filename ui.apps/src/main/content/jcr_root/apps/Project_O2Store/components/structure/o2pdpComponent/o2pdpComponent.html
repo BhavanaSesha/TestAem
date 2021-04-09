@@ -1,0 +1,362 @@
+<!-- <sly
+   data-sly-use.clientlib="${'/libs/granite/sightly/templates/clientlib.html'}"
+   data-sly-call="${clientLib.all @ categories='o2site'}"/> -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>O<sub>2</sub> Store</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+      <meta name="robots" content="noindex,follow" />
+      <style>
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .cmp_o2pdp_breadcrumb
+       {
+          margin-top:10px;
+          margin-left:100px;
+       }
+
+ .cmp_o2pdp_breadcrumb a
+      {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        color: orange;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+  .cmp_o2pdp_breadcrumb a:hover
+      {
+      color:#86939E;
+      }
+
+  .cmp_o2pdp_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display:flex;
+  }
+
+
+  .cmp_o2pdp_left-column {
+    margin-top:-30px;
+    width: 45%;
+    position: relative;
+
+  }
+
+  .cmp_o2pdp_right-column {
+    width: 60%;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .cmp_o2pdp_left-column img {
+    width: 480px;
+    height:500px;
+    margin-top: 46px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    border-radius:10px;
+    transition: all 0.3s ease;
+  }
+
+  .cmp_o2pdp_left-column img.active {
+    opacity: 1;
+  }
+
+
+  .cmp_o2pdp_product-description {
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .cmp_o2pdp_product-description span {
+    font-size: 12px;
+    color: #358ED7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .cmp_o2pdp_product-description h1 {
+    font-weight: 300;
+    font-size: 39px;
+    color: #43484D;
+    background-color:none;
+    letter-spacing: -2px;
+  }
+  .cmp_o2pdp_product-description p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+
+  .cmp_o2pdp_product-about{
+    border-bottom: 1px solid #E1E8EE;
+    margin-bottom: 20px;
+  }
+  .cmp_o2pdp_product-about h3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #43484D;
+    background-color:none;
+
+  }
+  .cmp_o2pdp_product-about li{
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939E;
+    line-height: 24px;
+  }
+
+
+  .cmp_o2pdp_product-price{
+    margin-top: -85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cmp_o2pdp_total-price {
+    font-size: 30px;
+    color: #fff;
+
+  }
+
+  .cmp_o2pdp_total-price .fa-rupee {
+    font-size: 90%;
+  }
+
+   #cmp_o2pdp_price
+   {
+     color: #43484D;
+     font-size: 23px;
+     font-weight:bold;
+   }
+
+
+  .cmp_o2pdp_quantity {
+      display: flex;
+      justify-content: center;
+      padding: 90px 30px;
+  }
+
+  .cmp_o2pdp_quantity button
+  {
+      width: 40px;
+      height: 40px;
+      border: 1px transparent;
+      color: black;
+      border-radius: 0;
+      background: transparent;
+
+  }
+
+  .cmp_o2pdp_quantity input {
+      border: none;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      text-align: center;
+      width: 50px;
+      font-size: 20px;
+      color: #000;
+      font-weight: 300;
+  }
+
+  .cmp_o2pdp_cart-btn {
+    display: inline-block;
+    background-color: #3a3b3c;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all .5s;
+  }
+  .cmp_o2pdp_cart-btn:hover {
+    background-color: pink;
+  }
+
+  .offer
+  {
+    margin-top:-73px;
+    border: dashed 1px #E1E8EE;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #43484D;
+    line-height: 24px;
+  }
+
+
+
+@media (max-width: 940px) {
+    .cmp_o2pdp_container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+
+    .cmp_o2pdp_left-column,
+    .cmp_o2pdp_right-column {
+      width: 100%;
+    }
+
+    .cmp_o2pdp_left-column img {
+      width: 200px;
+      height:150px;
+      top: -130px;
+
+    }
+    .cmp_o2pdp_right-column{
+    margin-top:230px;
+    }
+
+  }
+
+  @media (max-width: 1200px) {
+    .cmp_o2pdp_container {
+      flex-direction: column;
+      margin-top: 60px;
+    }
+
+    .cmp_o2pdp_left-column,
+    .cmp_o2pdp_right-column {
+      width: 100%;
+    }
+
+    .cmp_o2pdp_left-column img {
+      width: 250px;
+      height:250px;
+      top: -100px;
+      display:block;
+      margin-left:100px;
+      margin-right:auto;
+      margin-top:70px;
+    }
+
+    .cmp_o2pdp_breadcrumb
+       {
+          margin-top:10px;
+          margin-left:20px;
+       }
+  }
+      </style>
+   </head>
+
+   <body>
+      <h6 class="cmp_o2pdp_breadcrumb" data-sly-resource="${'breadcrumb' @resourceType='foundation/components/breadcrumb'}"></h6>
+
+   <main class="cmp_o2pdp_container">
+
+         <div class="cmp_o2pdp_left-column">
+            <img data-image="red" class="active" src="${properties.fileReference}" alt="">
+         </div>
+
+         <div class="cmp_o2pdp_right-column">
+
+         <div class="cmp_o2pdp_product-description">
+            <span>${properties.category}</span>
+            <h1>${properties.title}</h1>
+            <p>${properties.description}</p>
+         </div>
+
+         <div class="cmp_o2pdp_product-about">
+            <h3>About</h3>
+            <ul>
+               <li>${properties.aboutPoint1}</li>
+               <li>${properties.aboutPoint2}</li>
+               <li>${properties.aboutPoint3}</li>
+            </ul>
+         </div>
+
+         <div class="cmp_o2pdp_product-price">
+            <p class="cmp_o2pdp_total-price">
+                <span id="cmp_o2pdp_price">${properties.price}/- <del style="font-size:15px; margin-left:6px;"> ${properties.originalPrice}/-</del></span>
+             </p>
+             <div class="cmp_o2pdp_quantity">
+                <button class="btn minus-btn disabled" type="button">-</button>
+                <input type="text" id="cmp_o2pdp_quantity" value="1">
+                <button class="btn plus-btn" type="button">+</button>
+             </div>
+            <a href="#" class="cmp_o2pdp_cart-btn">Add to cart</a>
+         </div>
+         <div class="offer">
+           <p style="margin-left: 5px;">Today's Offer</p>
+            <ul>
+                <li>${properties.offer1}</li>
+                <li>${properties.offer2}</li>
+            </ul>
+        </div>
+       </div>
+      </main>
+
+
+
+
+      <script>
+       //setting default attribute to disabled of minus button
+ document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+
+ //taking value to increment decrement input value
+ var valueCount
+
+ //taking price value in variable
+ var price = document.getElementById("cmp_o2pdp_price").innerText;
+
+ //price calculation function
+ function priceTotal() {
+     var total = valueCount * price;
+     //document.getElementById("price").innerText = total
+ }
+
+ //plus button
+ document.querySelector(".plus-btn").addEventListener("click", function() {
+     //getting value of input
+     valueCount = document.getElementById("cmp_o2pdp_quantity").value;
+
+     //input value increment by 1
+     valueCount++;
+
+     //setting increment input value
+     document.getElementById("cmp_o2pdp_quantity").value = valueCount;
+
+     if (valueCount > 1) {
+         document.querySelector(".minus-btn").removeAttribute("disabled");
+         document.querySelector(".minus-btn").classList.remove("disabled")
+     }
+
+     //calling price function
+     priceTotal()
+ })
+
+ //plus button
+ document.querySelector(".minus-btn").addEventListener("click", function() {
+     //getting value of input
+     valueCount = document.getElementById("cmp_o2pdp_quantity").value;
+
+     //input value increment by 1
+     valueCount--;
+
+     //setting increment input value
+     document.getElementById("cmp_o2pdp_quantity").value = valueCount
+
+     if (valueCount == 1) {
+         document.querySelector(".minus-btn").setAttribute("disabled", "disabled")
+     }
+
+     //calling price function
+     priceTotal()
+ })
+ </script>
+   </body>
+</html>

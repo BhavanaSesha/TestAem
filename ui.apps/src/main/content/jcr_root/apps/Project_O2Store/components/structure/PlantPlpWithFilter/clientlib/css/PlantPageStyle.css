@@ -1,0 +1,31 @@
+
+    img{
+	padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    padding-bottom:20px;
+
+    }
+    .container{
+    float:right;
+    }
+    #cat{
+     float:left;
+     padding-top:20px;
+     padding-left:10px;
+    }
+	#sidenav-textstyle-catgories1{
+	color:green;
+    font-size:22px;
+    font-weight: bold;
+    }
+    #sidenav-textstyle-catgories{
+	color:green;
+    font-size:22px;
+    font-weight: bold;
+    }
+
+
+#plantdropdown{
+padding-left:5px;
+}

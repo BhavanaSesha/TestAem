@@ -1,0 +1,141 @@
+<style>
+
+*{
+    margin : 0;
+    padding : 0;
+}
+
+.paymentoptions-hero{
+    height : 100%;
+    width : 100%;
+    background-image : linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("/content/dam/Project_O2Store/en/paymentoptions/plant.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.paymentoptions-box{
+    width: 300px;
+    height: 350px;
+    position: relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.paymentoptions-button_box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #24ff2f1f;
+    border-radius: 30px;
+}
+
+.paymentoptions-toggle_btn{
+    font-size:18px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+     background: linear-gradient(to right,  #20BF55, #20BF55);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.creditcard-input_field{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    outline: none;
+    background: transparent;
+}
+
+.debitcard-input_field{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    outline: none;
+    background: transparent;
+}
+
+.payondelivery-input_field{
+    font-size: 20px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    outline: none;
+    background: transparent;
+}
+
+.paymentoptions-input_group{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+    margin-left: 50px;
+}
+
+.common{
+	background: #8FBC8F;
+	font-size: 1.25em;	
+	padding: 5px 5px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+</style>
+
+<body>
+<div class="paymentoptions-hero">
+<div class="paymentoptions-box">
+<div class="paymentoptions-button_box">
+    <div id="btn"></div>
+    <button type="button" class="paymentoptions-toggle_btn" >   Payment Options</button>
+</div>
+<form name="paymentoptions" id="paymentoptions-login" class="paymentoptions-input_group" >
+    <div class="common">
+    <a href="/content/Project_O2Store/en/login/CreditCard.html" style="text-decoration:none;" class="creditcard-input_field" id="creditcard"  name="creditcard" required>  Credit Card</a>
+    </div>
+    <br>
+    <br>
+    <div class="common">
+    <a href="/content/Project_O2Store/en/login/DebitCard.html" style="text-decoration:none;" class="debitcard-input_field" id="debitcard"  name="debitcard" required>  Debit Card</a>
+    </div>
+    <br>
+    <br>
+    <div class="common">
+    <a href="/content/Project_O2Store/en/login/orderPlaced.html" style="text-decoration:none;" class="payondelivery-input_field" id="payondelivery"  name="payondelivery" required>  Pay on Delivery</a>
+    </div>
+</form>
+</div>
+</div>
+</div>
+    </body>
